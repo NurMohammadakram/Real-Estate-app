@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    
+    <a class="navbar-brand d-lg-none" href="{% url 'home' %}">
+      <span class="fw-bolder fst-italic">Dalal Firoz Vai Real Estate</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#centralNavbar" aria-controls="centralNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="centralNavbar">
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fw-bold">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'for_sale' %}">For Sale</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'rent' %}">Rent</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'properties' %}">Properties</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'owners' %}">Owners/Advertiser</a>
+        </li>
+      </ul>
+
+      <a class="navbar-brand d-none d-lg-block mx-auto" href="{% url 'home' %}">
+        <p>Dalal Firoz Vai Real Estate</p>
+      </a>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase fw-bold">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
