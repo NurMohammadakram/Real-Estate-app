@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class EstateAppConfig(AppConfig):
-    name = 'estate_app'
+    name = 'apps.estate_app'
