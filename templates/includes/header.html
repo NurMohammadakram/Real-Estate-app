@@ -40,6 +40,18 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
         </li>
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="{% url 'profile' %}">
+            <span style="height: 30px; width: 30px; border: 2px solid rgb(51, 50, 50); border-radius: 50%; background-color: rgb(87, 87, 87); display: inline-block; margin-right: 5px;"></span>
+            <p> Profile</p>
+          </a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'user_login' %}">Sign In</a>
+        </li>
+        {% endif %}
       </ul>
 
     </div>
