@@ -20,6 +20,7 @@ def user_register(request):
             user=user,
             role=request.POST.get('role', 'user')
         )
+        user.save()
         login(request, user)
         return redirect('profile')
     return render(request, 'auth/register.html')

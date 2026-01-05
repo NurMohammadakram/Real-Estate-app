@@ -9,4 +9,5 @@ urlpatterns = [
     path('rent/', views.rent, name='rent'),
     path('properties/', views.properties, name='properties'),
     path('owners/', views.owners, name='owners'),
+    
 ]

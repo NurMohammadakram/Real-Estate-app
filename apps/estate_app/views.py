@@ -1,4 +1,7 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+
 
 
 # Create your views here.
@@ -20,5 +23,9 @@ def rent(request):
 def properties(request):
     return render(request, 'real_estate/properties.html')
 
+@login_required
 def owners(request):
-    return render(request, 'real_estate/owners.html')
+    if request.user.profile.role != 'owner':
+        return render(request, 'real_estate/owners.html')
+    
+    return render(request, 'owner/dashboard.html')
